@@ -16,8 +16,7 @@ Notification:
 # Installation
 
  - download and install [Hammerspoon](https://github.com/Hammerspoon/hammerspoon/releases/latest)
- - download and install [Take a break Spoon]()
- - open ~/.hammerspoon/init.lua and add following snippet:
+  - download and install [Take a break Spoon](https://github.com/fork-my-spoons/take-a-break.spoon/raw/main/take-a-break.spoon.zip) - open ~/.hammerspoon/init.lua and add following snippet:
 
 ```lua
 -- take a break
