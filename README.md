@@ -20,8 +20,7 @@ Notification:
  - open ~/.hammerspoon/init.lua and add following snippet:
 
 ```lua
--- GitLab
 -- take a break
-hs.loadSpoon("takeABreak")
-spoon.takeABreak:setup{notificationType = 'alert'} -- or 'notificaton'
+hs.loadSpoon("take-a-break")
+spoon['take-a-break']:setup{notificationType = 'alert'}
 ```
