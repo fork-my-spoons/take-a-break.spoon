@@ -46,7 +46,13 @@ function obj:notifyIn(mins)
 
     obj.refreshTimer = hs.timer.doEvery(60, function() 
         if obj.timer ~= nil and obj.timer:running() then 
-            obj.indicator:setTitle(math.ceil((obj.timer:nextTrigger()/60)))
+            if obj.timer:nextTrigger() < 0 then 
+                obj.timer = nil 
+                obj.refreshTimer = nil
+                obj.indicator:setTitle(nil)
+            else
+                obj.indicator:setTitle(math.ceil((obj.timer:nextTrigger()/60)))
+            end
         end 
     end)
 end
@@ -54,7 +60,7 @@ end
 function obj:buildMenu()
     local menu = {
         {title = 'Take a break in:', disabled = true},
-        {image = hs.image.imageFromPath(obj.iconPath .. '/15m.png'):setSize({w=20,h=20}):template(true), title = '15 minutes', fn = function() obj:notifyIn(0.5) end},
+        {image = hs.image.imageFromPath(obj.iconPath .. '/15m.png'):setSize({w=20,h=20}):template(true), title = '15 minutes', fn = function() obj:notifyIn(15) end},
         {image = hs.image.imageFromPath(obj.iconPath .. '/30m.png'):setSize({w=20,h=20}):template(true), title = '30 minutes', fn = function() obj:notifyIn(30) end},
         {image = hs.image.imageFromPath(obj.iconPath .. '/45m.png'):setSize({w=20,h=20}):template(true), title = '45 minutes', fn = function() obj:notifyIn(45) end},
         {title = '-'}
