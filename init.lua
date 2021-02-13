@@ -5,7 +5,7 @@ obj.__index = obj
 obj.name = "Take a break"
 obj.version = "1.0"
 obj.author = "Pavel Makhov"
-obj.homepage = "https://github.com/streetturtle/spoonify"
+obj.homepage = "https://github.com/fork-my-spoons/take-a-break.spoon"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
 
 obj.indicator = nil
