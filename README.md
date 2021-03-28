@@ -6,8 +6,6 @@ A simple menu bar app which sends a notification (or a popup alert) to take a br
   <img src="https://github.com/fork-my-spoons/take-a-break.spoon/raw/main/screenshots/menu.png"/>
 </p>
 
-![menu](./screenshots/menu.png)
-
 Time left in minutes: 
 <p align="center">
   <img src="https://github.com/fork-my-spoons/take-a-break.spoon/raw/main/screenshots/timer.png"/>
@@ -43,10 +41,3 @@ spoon['take-a-break']:setup{notificationType = 'alert'}
 ```
 
 This app uses icons, to properly display them, install a [feather-font](https://github.com/AT-UI/feather-font) by [downloading](https://github.com/AT-UI/feather-font/raw/master/src/fonts/feather.ttf) this .ttf font and installing it.
-
-
-
- - download and install [Hammerspoon](https://github.com/Hammerspoon/hammerspoon/releases/latest)
-  - download and install [take-a-break.spoon](https://github.com/fork-my-spoons/take-a-break.spoon/raw/main/take-a-break.spoon.zip) 
-  - open ~/.hammerspoon/init.lua and add following snippet:
-
